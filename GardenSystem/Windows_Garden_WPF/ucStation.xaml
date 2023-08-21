@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="GardenSystem.ucStation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GardenSystem"
+        mc:Ignorable="d"
+        Height="400" Width="auto" Background="#000060" BorderBrush="#000060" BorderThickness="05" >
+
+    <Viewbox Stretch="Fill">
+        <Grid>
+
+            <TabControl x:Name="Tabcontrol1" HorizontalAlignment="Center" Height="210" Margin="0,0,0,0" VerticalAlignment="Top" >
+                <TabItem x:Name="PageMain" Header="Main" Background="GhostWhite" Width="40" Height="18" >
+                    <Grid Background="#184066" Width="380" x:Name="Area1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"   Grid.Row="0" Grid.ColumnSpan="16" FontSize="9" FontWeight="Bold" Content="{Binding StationName}" Foreground="LightCyan" Background="Purple" Margin="0,0,-60,0" x:Name="lblName"/>
+
+                        <Label Grid.Column="2"   Grid.ColumnSpan="5"   Grid.RowSpan="3" Content="Serial Port Status"   Foreground="LightCyan" Grid.Row="1" Margin="0,2,0,11" />
+                        <Label Grid.Row="1" Grid.Column="10"  Grid.ColumnSpan="6"   Grid.RowSpan="3" Content="Port Connected   "    Foreground="White"  Background="Green" HorizontalContentAlignment="Center" x:Name="lblPort" Margin="0,5,0,8"/>
+
+                        <Label Grid.Row="3" Grid.Column="2"   Grid.ColumnSpan="4"   Grid.RowSpan="2" Content="Time"                 Foreground="White"  Background="Transparent" />
+                        <Label Grid.Row="3" Grid.Column="10"  Grid.ColumnSpan="6"   Grid.RowSpan="2" Content="00:00:00"             Foreground="Orange" Background="Transparent" HorizontalContentAlignment="Right" x:Name="lblNow"/>
+
+                        <Label Grid.Row="5" Grid.Column="2"   Grid.ColumnSpan="8"   Grid.RowSpan="2" Content="Time to Give Water (ticks)"  Foreground="White"  Background="Transparent" />
+                        <Label Grid.Row="5" Grid.Column="10"  Grid.ColumnSpan="6"   Grid.RowSpan="2" Content="00"                   Foreground="Orange"        Background="Transparent"  HorizontalContentAlignment="Right" x:Name="lblSecs"/>
+
+                        <Label Grid.Row="4" Grid.Column="2"   Grid.ColumnSpan="7"   Grid.RowSpan="2" Content="Next Plant Watering"  Foreground="White"  Background="Transparent" />
+                        <Label Grid.Row="4" Grid.Column="10"  Grid.ColumnSpan="6"   Grid.RowSpan="2" Content="00:00:00"             Foreground="Orange" Background="Transparent" HorizontalContentAlignment="Right" x:Name="lblNext"/>
+                        <Image Grid.Row="7" Grid.Column="2"   Grid.ColumnSpan="3"   Grid.RowSpan="4" Source="/Resources/225-2256704_png-file-svg-water-supply-icon-png-clipart.png" Margin="3,10,7,7" x:Name="WS"/>
+                        <Label Grid.Row="7" Grid.Column="4"   Grid.RowSpan="4" Content="Выполняется цикл полива" Foreground="White"  Background="#0055FF" Margin="9,10,0,7" x:Name="lblWatering" Grid.ColumnSpan="12" Width="{Binding lblCyclColSpan}" Visibility="Visible"/>
+
+                        <Image Grid.Row="7" Grid.Column="14"   Grid.ColumnSpan="2"  Grid.RowSpan="4" Source="/Resources/rubber_tube-gardening-water-tool-512.webp" Margin="0,6,0,3" x:Name="tubo" Visibility="Visible"/>
+                        <Image Grid.Row="6" Grid.Column="2"    Grid.ColumnSpan="3"  Grid.RowSpan="6" Source="/Resources/cless.jfif"  Margin="8,9,12,8" x:Name="cless" />
+                        <Image Grid.Row="6" Grid.Column="2"    Grid.ColumnSpan="3"  Grid.RowSpan="6" Source="/251_plug_socket_disconnect-512.webp"  Margin="8,9,12,8" x:Name="globe" />
+
+                        <Button Grid.Row="11" Grid.Column="4"  Grid.ColumnSpan="5"  Grid.RowSpan="3" Content="Open Water"       Foreground="green" Margin="0,4,0,12" Click="Button_Click" x:Name="pbOpen"/>
+                        <Button Grid.Row="11" Grid.Column="10" Grid.ColumnSpan="5"  Grid.RowSpan="3" Content="Close Water"      Foreground="red" Margin="0,4,0,12" Click="Button_Click_1" x:Name="pbClose"/>
+                        <Button Grid.Row="00" Grid.Column="14" Content="Disable"  Foreground="White" Background="Red"   Margin="17,1,3,2" Click="pbDisable" FontSize="9" Grid.ColumnSpan="3"/>
+                        <Button Grid.Row="00" Grid.Column="16" Content="Enable"   Foreground="Black" Background="Lime"  Margin="18,1,2,2" Click="pbEnable"  FontSize="9" Grid.ColumnSpan="3"/>
+                    </Grid>
+                </TabItem>
+
+                <TabItem x:Name="PageSettings" Header="Settings" Background="GhostWhite" Width="60" Height="18" >
+                    <Grid Width="380" x:Name="Area2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="17" />
+                            <ColumnDefinition Width="13"/>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+
+                        <Label   Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="5" Grid.RowSpan="2" Content="Cycle interval (secs)" />
+                        <TextBox Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="5" Grid.RowSpan="2" Text="86400"  x:Name="efInterval" BorderBrush="black" BorderThickness="1" Margin="0,3,0,17"/>
+
+                        <Label   Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="5" Grid.RowSpan="2" Content="Water interval (Ticks)" />
+                        <TextBox Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="5" Grid.RowSpan="2" Text="20"  x:Name="efTicks" BorderBrush="black" BorderThickness="1" Margin="0,4,0,16"/>
+
+                        <Label   Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="5" Grid.RowSpan="2" Content="Serial Port Name" />
+                        <TextBox Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="5" Grid.RowSpan="2" Text="COM3"  x:Name="efPort" BorderBrush="black" BorderThickness="1" Margin="0,4,0,16"/>
+
+                        <Button  Grid.Row="7" Grid.Column="8" Grid.ColumnSpan="5"  Grid.RowSpan="2" Content="Save"       Foreground="green" Margin="15,4,15,12" Click="pbSave_Click" />
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+            <TextBox  x:Name="TextBoxLog" Margin="0,0,0,0" Width="385" Height="150" FontSize="12" VerticalAlignment="Bottom" Background="Black" Foreground="Aquamarine">
+            </TextBox>
+
+            <StackPanel x:Name="panel1" Background="Gray" Margin="3,44,3,181" Visibility="Visible" Width="380">
+                <Label Content="STATION DISABLED" Foreground="White"/>
+                <Image Source="/251_plug_socket_disconnect-512.webp" Stretch="Fill" Height="130" Width="140"/>
+            </StackPanel>
+
+        </Grid>
+    </Viewbox>
+
+</UserControl>

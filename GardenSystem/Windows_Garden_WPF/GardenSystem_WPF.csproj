@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="225-2256704_png-file-svg-water-supply-icon-png-clipart.png" />
+    <None Remove="251_plug_socket_disconnect-512.webp" />
+    <None Remove="cless.jfif" />
+    <None Remove="OIP.jfif" />
+    <None Remove="rubber_tube-gardening-water-tool-512.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.11.0" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Managed" Version="1.11.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logger\Logger\Logger\Logger.vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="251_plug_socket_disconnect-512.webp" />
+    <Resource Include="Resources\225-2256704_png-file-svg-water-supply-icon-png-clipart.png" />
+    <Resource Include="Resources\cless.jfif" />
+    <Resource Include="Resources\OIP.jfif" />
+    <Resource Include="rubber_tube-gardening-water-tool-512.webp" />
+  </ItemGroup>
+
+</Project>

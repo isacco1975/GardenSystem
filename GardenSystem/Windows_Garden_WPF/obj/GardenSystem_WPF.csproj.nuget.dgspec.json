@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Windows_Garden_WPF\\GardenSystem_WPF.csproj": {}
+  },
+  "projects": {
+    "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Logger\\Logger\\Logger\\Logger.vbproj": {
+      "restore": {
+        "projectUniqueName": "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Logger\\Logger\\Logger\\Logger.vbproj",
+        "projectName": "Logger",
+        "projectPath": "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Logger\\Logger\\Logger\\Logger.vbproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Windows_Garden_WPF\\GardenSystem_WPF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Windows_Garden_WPF\\GardenSystem_WPF.csproj",
+        "projectName": "GardenSystem_WPF",
+        "projectPath": "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Windows_Garden_WPF\\GardenSystem_WPF.csproj",
+        "packagesPath": "C:\\Users\\isacc\\.nuget\\packages\\",
+        "outputPath": "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Windows_Garden_WPF\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\isacc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Logger\\Logger\\Logger\\Logger.vbproj": {
+                "projectPath": "D:\\PublicRepos\\GandenSystem\\GardenSystem\\Logger\\Logger\\Logger\\Logger.vbproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.ML.OnnxRuntime": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
+            "Microsoft.ML.OnnxRuntime.Managed": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
