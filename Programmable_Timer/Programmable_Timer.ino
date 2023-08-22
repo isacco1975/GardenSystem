@@ -218,9 +218,6 @@
    {
        NOKIA_5110_LCD.setContrast(45);
 
-       //Sending message to arduino NANO
-       IGP_Serial.write("ON", 2);
-
        tone(BUZZER, 25000);
 
        digitalWrite(PIN_RELAY_1, HIGH);
@@ -234,6 +231,9 @@
 
        while (stepWateringCycle < maxTime) // Open water for 15 seconds
        {
+          //Sending message to arduino NANO
+          IGP_Serial.write("ON", 2);
+
           asteriscNum++;
           if (asteriscNum < 15)
           {
