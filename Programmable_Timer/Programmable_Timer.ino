@@ -383,5 +383,5 @@
       ReadButtonValues();
 	   CheckButtonStatuses();
 
-      delay(999);
+      delay(950);
    }
